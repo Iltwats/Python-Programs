@@ -4,15 +4,9 @@
 #  saying that her list is in reverse order.The contents of Drew's list, followed by Jamie's list in reverse order, to get an accurate list of the students as they arrived.
 
 
-def combine_lists(list1, list2):
-  
-  new_list = list2
-  for i in reversed(range(len(list1))):
-    new_list.append(list1[i])
-  return new_list
-
-
 Jamies_list = ["Alice", "Cindy", "Bobby", "Jan", "Peter"]
 Drews_list = ["Mike", "Carol", "Greg", "Marcia"]
 
-print(combine_lists(Jamies_list, Drews_list))
+Jamies_list.reverse()
+Drews_list.extend(Jamies_list)
+print(Drews_list)
